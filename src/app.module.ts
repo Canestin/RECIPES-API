@@ -9,7 +9,7 @@ import { IngredientsModule } from './ingredients/ingredients.module';
     host: 'localhost',
     port: 5432,
     username: 'postgres',
-    password: 'Canestin',
+    password: 'password',
     database: 'dbapi',
     entities: ['src/entities/*.ts'],
     synchronize: true,
