@@ -1,7 +1,7 @@
 import { Controller, Get, Put, Delete, Post, Param, Body } from '@nestjs/common';
 import { HttpException, HttpStatus } from '@nestjs/common';
 import { IngredientsService } from './ingredients.service';
-import { IngredientDto } from 'src/dtos/Ingredient.dto';
+import { IngredientDto } from '../dtos/Ingredient.dto';
 
 
 

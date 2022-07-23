@@ -1,9 +1,9 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToMany } from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity('recipes')
+@Entity('ingredients')
 export class IngredientEntity {
 
-    @PrimaryGeneratedColumn( {name: "recipeId"} )
+    @PrimaryGeneratedColumn( {name: "ingredientId"} )
     id: number
 
     @Column()
@@ -11,8 +11,4 @@ export class IngredientEntity {
 
     @Column()
     aisle: string;
-
-    @ManyToMany(type => IngredientEntity)
-    recipes: IngredientEntity[];
-
 }    

@@ -53,10 +53,10 @@ export class RecipeController {
     @Delete(':recipeId')
     async deleteRecipe(@Param('recipeId') recipeId: number) {
         const recipe = await this.recipeService.deleteRecipe(recipeId);
-        if(recipe){
-            return 'Recipe has been deleted';
+        if(!recipe){
+            throw new HttpException('Recipe not updated', HttpStatus.NOT_MODIFIED);
         }
-        throw new HttpException('Recipe not updated', HttpStatus.NOT_MODIFIED);
+        return 'Recipe has been deleted';
     }
 
 }

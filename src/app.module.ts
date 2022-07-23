@@ -4,17 +4,17 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { IngredientsModule } from './ingredients/ingredients.module';
 
 @Module({
-  imports: [RecipeModule, IngredientsModule, TypeOrmModule.forRoot({
+  imports: [RecipeModule, TypeOrmModule.forRoot({
     type: 'postgres',
     host: 'localhost',
     port: 5432,
     username: 'postgres',
-    password: 'password',
+    password: 'your-password',
     database: 'dbapi',
     entities: ['src/entities/*.ts'],
     synchronize: true,
     logging: true,
-  })],
+  }), IngredientsModule],
   controllers: [],
   providers: [],
 
